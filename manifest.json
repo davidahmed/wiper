@@ -14,6 +14,13 @@
 		"default_title": "Wiper"
 	}, 
 	
+
+	"sidebar_action": {
+		"default_icon": "icons/wiper-48.png",
+		"default_title": "Wiper",
+		"default_panel": "sidebar/panel.html"
+	},
+
 	"content_scripts": [
 		{
 			"matches": [
