@@ -8,6 +8,11 @@
 	"icons": {
 		"48": "icons/wiper-48.png"
 	},
+
+	"browser_action": {
+		"default_icon": "icons/wiper-48.png",
+		"default_title": "Wiper"
+	}, 
 	
 	"content_scripts": [
 		{
