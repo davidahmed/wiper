@@ -7,7 +7,12 @@ body {
 	margin-top: 20px;
 }
 
+.removeButton{
+	display: inline-block;
+	float: right;
+}
+
 .urlEntry{
-	padding-left: 5px;
+	padding: 5px;
 	border: 1px solid grey;
 }
