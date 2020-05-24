@@ -37,7 +37,6 @@ async function removeURL(event){
 
 function displayURLs(urls){
 	urls = urls.blacklistURLs;
-	console.log(urls);
 	if (urls !== 'undefined'){
 		document.getElementById('urls').textContent = '';
 		for (var i=0; i<urls.length; i++){
