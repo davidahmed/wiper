@@ -2,7 +2,7 @@
 
 Wiper is a browser pluging (currently Firefox) that filters out search engine (currently Google) results based on your custom 'grey list'.
 
-## Wiper 1.0 (latest)
+## Wiper 0.9 (beta- latest)
 Allows for adding and removing user's own blacklist using view>sidebar>Wiper.
 
 ## Wiper 0.1
