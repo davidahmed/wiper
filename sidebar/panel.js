@@ -16,6 +16,7 @@ async function addURL(){
 	browser.storage.local.get("blacklistURLs").then(displayURLs);
 }
 
+
 function displayURLs(urls){
 	urls = urls.blacklistURLs;
 	console.log(urls);
@@ -29,6 +30,7 @@ function displayURLs(urls){
 		}
 	}
 }
+
 
 browser.storage.local.get('blacklistURLs').then(displayURLs);
 document.getElementById("addURL").addEventListener("click", addURL);
