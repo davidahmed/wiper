@@ -16,7 +16,11 @@ function clearURLs(urls){
 		}
 	}
 	arr = [...new Set(arr)];
-	for(var i=0; i<arr.length; i++){res[arr[i]].parentElement.innerHTML=""}
+	for(var i=0; i<arr.length; i++){
+		var url = res[arr[i]].firstChild.firstChild.getAttribute('href');
+		url = 'Wiper blacklisted URL: <a href="'+url+'">'+url+'</a>';
+		res[arr[i]].parentElement.innerHTML = url;
+	}
 }
 
 browser.storage.local.get('blacklistURLs').then(clearURLs);
