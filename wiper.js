@@ -11,3 +11,8 @@ for (var i= 0; i < res.length; i++){
 		res[i].parentElement.remove()
 	}
 }
+
+function handleURLs(urls){
+	console.log(urls);
+}
+browser.storage.local.get('blacklistURLs').then(handleURLs);

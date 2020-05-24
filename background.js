@@ -4,7 +4,7 @@ If we don't, then store the default settings.
 */
 function checkStoredSettings(storedSettings) {
   if (!storedSettings.blacklistURLS) {
-    browser.storage.local.set({'blacklistURLs': ["geeksforgeeks.com"]});
+    browser.storage.local.set({'blacklistURLs': []});
   }
 }
 
