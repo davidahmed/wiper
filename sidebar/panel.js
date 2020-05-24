@@ -16,8 +16,8 @@ function popURL(urls, urlToRemove){
 }
 
 async function addURL(){
-	var url = document.getElementById('inputURL').value;
-	document.getElementById('inputURL').value = "";
+	var url = document.getElementById('addURLField').value;
+	document.getElementById('addURLField').value = "";
 	if (typeof url.match(URLregex)[3] !== 'undefined'){
 		await browser.storage.local.get("blacklistURLs").then(function(urls){
 			return pushURL(urls, url.match(URLregex)[3])});
@@ -59,4 +59,4 @@ function displayURLs(urls){
 
 
 browser.storage.local.get('blacklistURLs').then(displayURLs);
-document.getElementById("addURL").addEventListener("click", addURL);
+document.getElementById("addURLButton").addEventListener("click", addURL);

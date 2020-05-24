@@ -4,7 +4,30 @@ body {
 }
 
 #newURL{
-	margin-top: 20px;
+	margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#addURLButton, #addURLField{
+	padding: 4px 4px;
+	font-size: 1rem;
+	border-radius: 0;
+	border: 1px solid #aaaaaa;
+	background-color: #eeeeee;
+}
+
+#addURLField {
+	margin-right: 2px;
+	flex-grow: 1;
+}
+#addURLButton{
+	float: right;
+	transition-duration: 0.2s;
+}
+#addURLButton:hover{
+	background-color: #fefefe;
+	border: 1px solid grey;
 }
 
 .removeButton{
@@ -14,5 +37,11 @@ body {
 
 .urlEntry{
 	padding: 5px;
-	border: 1px solid grey;
+	border: 1px solid #fefefe;
+	background-color: #eeeeee;
+}
+
+.heading{
+	padding-top: 10px;
+	font-weight: normal;
 }
