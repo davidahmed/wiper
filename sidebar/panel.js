@@ -59,5 +59,14 @@ function displayURLs(urls) {
     }
 }
 
-browser.storage.local.get('blacklistURLs').then(displayURLs);
 document.getElementById("addURLButton").addEventListener("click", addURL);
+
+document.getElementById("addURLField")
+    .addEventListener("keyup", function (event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("addURLButton").click();
+    }
+});
+
+browser.storage.local.get('blacklistURLs').then(displayURLs);
