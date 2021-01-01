@@ -8,8 +8,8 @@ function clearURLs(urls) {
   const decorateURL = (url) => `Wiper blacklisted URL: <a href="${url}">${url}</a>`;
 
   Array.from(document.querySelectorAll('div.g'))
-  filter(result => isBlacklistedUrl(result.querySelector('a').href))
-  forEach(result => {result.innerHTML = decorateURL(result.querySelector('a').href)});
+    .filter(result => isBlacklistedUrl(result.querySelector('a').href))
+    .forEach(result => {result.innerHTML = decorateURL(result.querySelector('a').href)});
 
   return true;
 }
