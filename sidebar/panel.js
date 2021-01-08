@@ -64,7 +64,7 @@ document.getElementById("addURLButton").addEventListener("click", addURL);
 document.getElementById("google-switch").addEventListener("click", ()=>{
     if (document.getElementById("google-switch").checked === true){
         browser.storage.local.set({'enabled': true})
-            .then(()=>{console.log('True')});
+            .then(()=>{console.log(document.getElementById("google-switch").checked)});
     }
     else {
         browser.storage.local.set({'enabled': false})
@@ -79,5 +79,6 @@ document.getElementById("addURLField")
         document.getElementById("addURLButton").click();
     }
 });
+
 
 browser.storage.local.get('blacklistURLs').then(displayURLs);
