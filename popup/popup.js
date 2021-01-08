@@ -41,7 +41,15 @@ function displayURLs(urls) {
     var i, e, removeButton;
     urls = urls.blacklistURLs;
     if (urls !== 'undefined') {
-        document.getElementById('urls').textContent = '';
+        if (urls.length == 0) {
+            document.getElementById('urls').innerHTML = `
+                Currently no keywords or URLs are blacklisted.
+                <br> Please add some keywords, for e.g., python2,<br> 
+                example.com, etc.`
+        }
+        else{
+            document.getElementById('urls').textContent = ''
+        }
         for (i = 0; i < urls.length; i++) {
             e = document.createElement('div');
             removeButton = document.createElement('input');

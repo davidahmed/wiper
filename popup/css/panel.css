@@ -40,6 +40,9 @@ h3, h4, h5, h6 {
 .mt-3 {
 	margin-top: 8px;
 }
+.mb-3 {
+	margin-bottom: 8px;
+}
 .font-lg {
 	font-size: large;
 }
@@ -54,6 +57,10 @@ h3, h4, h5, h6 {
 	font-weight: 500;
 }
 
+.body-10 {
+	font-size: 13px;
+	font-weight: 400;
+}
 .extra-light {
 	font-weight: 200;
 }
@@ -87,11 +94,10 @@ h3, h4, h5, h6 {
 }
 
 #addURLButton, #addURLField{
-	padding: 4px 4px;
-	font-size: 1rem;
-	border-radius: 0;
+	font-size: 13px;
+	padding: 3px;
+	border-radius: 2px;
 	border: 1px solid #aaaaaa;
-	background-color: #eeeeee;
 }
 
 #addURLField {
@@ -115,12 +121,16 @@ h3, h4, h5, h6 {
 .removeButton{
 	display: inline-block;
 	float: right;
+	font-weight: 500;
+	font-size: 13px;
 }
 
 .urlEntry {
 	padding: 5px;
 	border: 1px solid #fefefe;
 	background-color: #eeeeee;
+	font-weight: 400;
+	font-size: 13px;
 }
 
 .heading {
