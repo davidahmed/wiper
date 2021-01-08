@@ -16,18 +16,13 @@
 
 	"browser_action": {
 		"default_icon": "icons/icon-96.png",
-		"default_title": "Wiper"
+		"default_title": "Wiper",
+		"default_popup": "popup/popup.html"
 	},
 
 	"permissions": [
 		"storage"
 	],
-
-	"sidebar_action": {
-		"default_icon": "icons/icon-96.png",
-		"default_title": "Wiper",
-		"default_panel": "sidebar/panel.html"
-	},
 
 	"content_scripts": [
 		{
