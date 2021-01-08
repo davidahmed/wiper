@@ -1,7 +1,8 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Fira Sans', sans-serif;}
+	font-family: 'Fira Sans', sans-serif;
+}
 
 body {
 	margin-left: 5px;
@@ -33,13 +34,31 @@ h3, h4, h5, h6 {
 .m-3 {
 	margin: 8px;
 }
-
-.font-lg{
+.ml-3 {
+	margin-left: 8px;
+}
+.mt-3 {
+	margin-top: 8px;
+}
+.font-lg {
 	font-size: large;
 }
 
+.title-20 {
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.title-10 {
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.extra-light {
+	font-weight: 200;
+}
 .uppercase {
-	text-transform: capitalize;
+	text-transform: uppercase;
 }
 
 .bolder {
@@ -60,8 +79,6 @@ h3, h4, h5, h6 {
 .align-center {
 	align-items: center;
 }
-
-
 
 #newURL{
 	margin-top: 2rem;
@@ -89,19 +106,30 @@ h3, h4, h5, h6 {
 	background-color: #fefefe;
 	border: 1px solid grey;
 }
+#header img{
+	height: 36px;
+	width: 36px;
+	border-radius: 50%;
+}
 
 .removeButton{
 	display: inline-block;
 	float: right;
 }
 
-.urlEntry{
+.urlEntry {
 	padding: 5px;
 	border: 1px solid #fefefe;
 	background-color: #eeeeee;
 }
 
-.heading{
+.heading {
 	padding-top: 10px;
 	font-weight: normal;
+}
+
+.se-with-switch {
+	padding: 10px 4px 10px 4px;
+	border: 1px solid rgb(243, 239, 239);
+	border-radius: 10px;
 }

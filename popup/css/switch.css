@@ -1,22 +1,23 @@
 .onoffswitch {
-    position: relative; width: 60px;
+    position: relative; width: 48px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
 .onoffswitch-checkbox {
     position: absolute;
     opacity: 0;
     pointer-events: none;
+    height: 2px;
 }
 .onoffswitch-label {
     display: block; overflow: hidden; cursor: pointer;
-    height: 30px; padding: 0; line-height: 30px;
-    border: 2px solid #E3E3E3; border-radius: 30px;
+    height: 17px; padding: 0; line-height: 17px;
+    border: 2px solid #E3E3E3; border-radius: 22px;
     background-color: #FFFFFF;
     transition: background-color 0.3s ease-in;
 }
 .onoffswitch-label:before {
     content: "";
-    display: block; width: 30px; margin: 0px;
+    display: block; width: 17px; margin: 0px;
     background: #FFFFFF;
     position: absolute; top: 0; bottom: 0;
     right: 28px;
