@@ -1,113 +1,114 @@
 body {
-	margin-left: 5px;
-	margin-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-#newURL{
-	margin-top: 2rem;
-	display: flex;
-	flex-wrap: wrap;
+#newURL {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#addURLButton, #addURLField{
-	padding: 4px 4px;
-	font-size: 1rem;
-	border-radius: 0;
-	border: 1px solid #aaaaaa;
-	background-color: #eeeeee;
+#addURLButton,
+#addURLField {
+  padding: 4px 4px;
+  font-size: 1rem;
+  border-radius: 0;
+  border: 1px solid #aaaaaa;
+  background-color: #eeeeee;
 }
 
 #addURLField {
-	margin-right: 2px;
-	flex-grow: 1;
+  margin-right: 2px;
+  flex-grow: 1;
 }
-#addURLButton{
-	float: right;
-	transition-duration: 0.2s;
+#addURLButton {
+  float: right;
+  transition-duration: 0.2s;
 }
-#addURLButton:hover{
-	background-color: #fefefe;
-	border: 1px solid grey;
-}
-
-.removeButton{
-	display: inline-block;
-	float: right;
+#addURLButton:hover {
+  background-color: #fefefe;
+  border: 1px solid grey;
 }
 
-.urlEntry{
-	padding: 5px;
-	border: 1px solid #fefefe;
-	background-color: #eeeeee;
+.removeButton {
+  display: inline-block;
+  float: right;
 }
 
-.heading{
-	padding-top: 10px;
-	font-weight: normal;
+.urlEntry {
+  padding: 5px;
+  border: 1px solid #fefefe;
+  background-color: #eeeeee;
+}
+
+.heading {
+  padding-top: 10px;
+  font-weight: normal;
 }
 
 #displayError {
-	visibility: hidden;
-	min-width: 250px;
-	font-size: 15px;
-	margin-left: -125px;
-	background-color: red;
-	color: #fff;
-	text-align: center;
-	border-radius: 3px;
-	position: fixed;
-	padding: 8px;
-	z-index: 1;
-	left: 50%;
-	bottom: 25px;
+  visibility: hidden;
+  min-width: 250px;
+  font-size: 15px;
+  margin-left: -125px;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  position: fixed;
+  padding: 8px;
+  z-index: 1;
+  left: 50%;
+  bottom: 25px;
+}
+
+#displayError.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
   }
-  
-  #displayError.show {
-	visibility: visible;
-	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  to {
+    bottom: 25px;
+    opacity: 1;
   }
-  
-  @-webkit-keyframes fadein {
-	from {
-	  bottom: 0;
-	  opacity: 0;
-	}
-	to {
-	  bottom: 25px;
-	  opacity: 1;
-	}
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
   }
-  
-  @keyframes fadein {
-	from {
-	  bottom: 0;
-	  opacity: 0;
-	}
-	to {
-	  bottom: 25px;
-	  opacity: 1;
-	}
+  to {
+    bottom: 25px;
+    opacity: 1;
   }
-  
-  @-webkit-keyframes fadeout {
-	from {
-	  bottom: 30px;
-	  opacity: 1;
-	}
-	to {
-	  bottom: 0;
-	  opacity: 0;
-	}
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
   }
-  
-  @keyframes fadeout {
-	from {
-	  bottom: 25px;
-	  opacity: 1;
-	}
-	to {
-	  bottom: 0;
-	  opacity: 0;
-	}
+  to {
+    bottom: 0;
+    opacity: 0;
   }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 25px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
