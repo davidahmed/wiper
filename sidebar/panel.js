@@ -1,5 +1,15 @@
 var URLregex = new RegExp('((ftp|http|https):\/\/)?([a-zA-Z1-9@:%._\+~#=\.\-]+)(\/.*)?');
 
+
+const displayErrorMessage = errorMessage => {
+    let getErrorDiv = document.getElementById("displayError");
+    getErrorDiv.className = "show";
+    getErrorDiv.innerHTML = errorMessage;
+    setTimeout(() => {
+      getErrorDiv.className = getErrorDiv.className.replace("show", "");
+    }, 3000);
+  };
+
 function pushURL(urls, newURL) {
     var oldURLs = urls.blacklistURLs;
     oldURLs.push(newURL);
@@ -17,14 +27,24 @@ function popURL(urls, urlToRemove) {
 }
 
 async function addURL() {
-    var url = document.getElementById('addURLField').value;
-    document.getElementById('addURLField').value = "";
-    if (typeof url.match(URLregex)[3] !== 'undefined') {
-        await browser.storage.local.get("blacklistURLs").then(function (urls) {
-            return pushURL(urls, url.match(URLregex)[3]);
-        });
+
+    try{
+        let url = document.getElementById('addURLField').value;
+        document.getElementById('addURLField').value = "";
+        if (typeof url.match(URLregex)[3] !== 'undefined') {
+            await browser.storage.local.get("blacklistURLs").then(function (urls) {
+                return pushURL(urls, url.match(URLregex)[3]);
+            });
+        }else{
+        displayErrorMessage("Not valid URL is passed");
+        }
+        browser.storage.local.get("blacklistURLs").then(displayURLs);
+    }catch(error){
+        // need to replace it with simple message
+        // for now I think we are good to go.
+        displayErrorMessage(error.message);
     }
-    browser.storage.local.get("blacklistURLs").then(displayURLs);
+    
 }
 
 async function removeURL(event) {
@@ -68,5 +88,6 @@ document.getElementById("addURLField")
         document.getElementById("addURLButton").click();
     }
 });
+
 
 browser.storage.local.get('blacklistURLs').then(displayURLs);

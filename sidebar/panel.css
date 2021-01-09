@@ -45,3 +45,69 @@ body {
 	padding-top: 10px;
 	font-weight: normal;
 }
+
+#displayError {
+	visibility: hidden;
+	min-width: 250px;
+	font-size: 15px;
+	margin-left: -125px;
+	background-color: red;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px;
+	position: fixed;
+	padding: 8px;
+	z-index: 1;
+	left: 50%;
+	bottom: 25px;
+  }
+  
+  #displayError.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+	from {
+	  bottom: 0;
+	  opacity: 0;
+	}
+	to {
+	  bottom: 25px;
+	  opacity: 1;
+	}
+  }
+  
+  @keyframes fadein {
+	from {
+	  bottom: 0;
+	  opacity: 0;
+	}
+	to {
+	  bottom: 25px;
+	  opacity: 1;
+	}
+  }
+  
+  @-webkit-keyframes fadeout {
+	from {
+	  bottom: 30px;
+	  opacity: 1;
+	}
+	to {
+	  bottom: 0;
+	  opacity: 0;
+	}
+  }
+  
+  @keyframes fadeout {
+	from {
+	  bottom: 25px;
+	  opacity: 1;
+	}
+	to {
+	  bottom: 0;
+	  opacity: 0;
+	}
+  }
