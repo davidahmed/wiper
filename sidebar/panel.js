@@ -11,9 +11,23 @@ const displayErrorMessage = errorMessage => {
   };
 
 function pushURL(urls, newURL) {
-    var oldURLs = urls.blacklistURLs;
-    oldURLs.push(newURL);
-    browser.storage.local.set({'blacklistURLs': oldURLs});
+    let oldURLs = undefined;
+    try {
+      // grab the list
+      oldURLs = urls.blacklistURLs;
+      // to make sure only unique URL is added
+      if (oldURLs.indexOf(newURL) === -1) {
+        oldURLs.push(newURL);
+        browser.storage.local.set({ blacklistURLs: oldURLs });
+      } else {
+        displayErrorMessage("The URL is already blacklisted");
+      }
+    } catch (error) {
+      if (error instanceof TypeError && oldURLs === undefined) {
+        initStorage();
+        displayErrorMessage("Storage was empty. Try Again");
+      }
+    }
 }
 
 function popURL(urls, urlToRemove) {
@@ -89,5 +103,19 @@ document.getElementById("addURLField")
     }
 });
 
+  // load default storage
+  const initStorage = () => {
+    browser.storage.local.get().then(
+      (storedSettings) => {
+        if (!storedSettings.blacklistURLS) {
+          browser.storage.local.set({ blacklistURLs: [] });
+        }
+      },
+      (error) => {
+        // Generic error logger.
+        console.error(error);
+      }
+    );
+  };
 
 browser.storage.local.get('blacklistURLs').then(displayURLs);
