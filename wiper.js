@@ -14,12 +14,8 @@ function clearURLs(urls) {
   return true;
 }
 
-
-function handleBlacklistURLs(blacklist){
-    return clearURLs(blacklist.blacklistURLs);
-  }
+const handleBlacklistURLs = blacklist => clearURLs(blacklist.blacklistURLs);
     
-
 /* global operations for every time the target page (./google./search) loads */
 document.body.style.border = "1px solid blue";
 browser.storage.local.get('blacklistURLs').then(handleBlacklistURLs);
