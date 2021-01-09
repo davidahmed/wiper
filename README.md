@@ -9,8 +9,8 @@ Wiper is a browser plugin that strips search engine results based on your custom
 
 # Key Features
 * Stupidly [easy to use](#usage).
-* Currently works for Google search engine results. Other search engines support is comming soon.
-* Currently only supports Firefox browser. Other browser support is also comming soon.
+* Currently works for Google search engine results only.
+* Currently supports Firefox browser only.
 
 
 # Wiper 0.9 (beta- latest)
