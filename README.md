@@ -3,8 +3,11 @@
 Wiper is a browser plugin (currently Firefox) that strips search engine (currently Google) results based on your custom blacklist.
 
 
-## Wiper 0.9 (beta- latest)
-Allows for adding and removing user's own blacklist using view>sidebar>Wiper.
+## Wiper 0.9.1 (beta- latest)
+New features/improvements:
+1. Popup option instead of the sidebar. This allows for much shorter time in adding newer keywords and websites.
+2. Quick toggle enable/disable option. This was not possible before.
+3. New UI design as per https://design.firefox.com/photon/index.html so thinks look sleek and are as usable as possible!
 
 Available on Firefox Add-ons [here](https://addons.mozilla.org/en-US/firefox/addon/wiper/)
 
@@ -13,4 +16,4 @@ Available on Firefox Add-ons [here](https://addons.mozilla.org/en-US/firefox/add
 Targets `google.*/search` and removes results that are in the blacklist (defined in the scripts).
 
 ____
-[![ezgif.com-video-to-gifaf59576bcc3360ff.gif](https://s7.gifyu.com/images/ezgif.com-video-to-gifaf59576bcc3360ff.gif)](https://gifyu.com/image/n0bP)
+![sample image of how wiper would work for you](https://i.ibb.co/6WwS6XH/Screen-Shot-2021-01-14-at-23-30-52.png)
