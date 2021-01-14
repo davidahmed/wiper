@@ -37,7 +37,7 @@ function reportError(err) {
 }
 
 /* global operations for every time the target page (./google./search) loads */
-document.body.style.border = "1px solid blue";
+//document.body.style.border = "1px solid blue";
 
 browser.storage.local.get('enabled')
   .then( 
