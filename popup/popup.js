@@ -69,6 +69,13 @@ function displayURLs(urls) {
 
 document.getElementById("addURLButton").addEventListener("click", addURL);
 
+// set the right state for the popup switch key
+browser.storage.local.get('enabled')
+    .then((val) => {
+        document.getElementById("google-switch").checked = val.enabled
+    }, console.log);
+
+// Handler for plugin enable/disable    
 document.getElementById("google-switch").addEventListener("click", ()=>{
     if (document.getElementById("google-switch").checked === true){
         browser.storage.local.set({'enabled': true})
