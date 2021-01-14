@@ -21,15 +21,9 @@ function handleBlacklistURLs(blacklist){
 
 function handleGoogleSearchResults(toggle){
   if (toggle === true){ 
-    document.body.style.border = "1px solid blue";
     browser.runtime.sendMessage({'message': 'google.com-true'});
     browser.storage.local.get('blacklistURLs')
       .then(handleBlacklistURLs, reportError);
-  }
-
-  else {
-    document.body.style.border = "1px solid red";
-
   }
 }
 
