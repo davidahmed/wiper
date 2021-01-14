@@ -1,0 +1,50 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/panel.css" />
+	<link rel="stylesheet" href="css/switch.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+</head>
+
+<body class="m-3">
+	<div class="flex align-center mt-3" id="header">
+		<img class="m-3" src="images/icon-96.png">
+		<div class="m-3">
+			<h2 class="title-20">Wiper</h2>
+			<h2 class="title-10 extra-light">Clean your search results</h2>
+		</div>
+	</div>
+	<br>
+	<!-- Switch to toggle the plugin -->
+	<div id="plugin-enable-switch">
+		<p class="title-10 uppercase">
+			Enable/Disable on:
+		</p>
+		<div class="se-with-switch p-2 m-2 flex space-between align-center" id="search-engine-google">
+			<h4 class="title-20">Google</h4>
+			<div class="onoffswitch">
+				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="google-switch" tabindex="0" checked>
+				<label class="onoffswitch-label" for="google-switch"></label>
+			</div>
+		</div>
+		<hr style="color: #E5E5E5; margin-top: 10px;">
+	</div>
+	
+	<h3 class="title-20 mt-3 mb-3"> Currently blacklisted keywords/URLs</h3>
+	<div class="body-10 m-2" id="urls">
+	</div>
+
+	<div id="newURL">
+		<input class="title-10" type="text" id="addURLField" 
+			placeholder="URL (example.com) or keyword (python2)"
+			name="inputURL">
+		<input class="title-10" type="button" id="addURLButton" value="Add">
+	</div>
+	<script src="popup.js">
+	</script>
+
+</body>
+
+</html>
