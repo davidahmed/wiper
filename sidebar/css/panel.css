@@ -1,7 +1,67 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	margin-left: 5px;
 	margin-right: 5px;
 }
+
+
+h3, h4, h5, h6 {
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+.p-1 {
+	padding: 2px;
+}
+.p-2 {
+	padding: 4px;
+}
+.p-3 {
+	padding: 8px;
+}
+
+.m-1 {
+	margin: 2px;
+}
+.m-2 {
+	margin: 4px;
+}
+.m-3 {
+	margin: 8px;
+}
+
+.font-lg{
+	font-size: large;
+}
+
+.uppercase {
+	text-transform: capitalize;
+}
+
+.bolder {
+	font-weight: bolder;
+}
+.bold {
+	font-weight: bold;
+}
+
+.flex {
+	display: flex;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.align-center {
+	align-items: center;
+}
+
+
 
 #newURL{
 	margin-top: 2rem;
