@@ -2,12 +2,13 @@
 On startup, check whether we have stored settings.
 If we don't, then store the default settings.
 */
-function checkStoredSettings(storedSettings) {
-  if (!storedSettings.blacklistURLS) {
+browser.storage.local.get().then( (val) => {
+  if (val['blacklistURLs'] === undefined){
+    console.log('Initializing Wiper');
     browser.storage.local.set({'blacklistURLs': []});
     browser.storage.local.set({'enabled': true});
   }
-}
+}, console.log);
 
 /*
 Generic error logger.
@@ -15,9 +16,6 @@ Generic error logger.
 function onError(e) {
   console.error(e);
 }
-
-const gettingStoredSettings = browser.storage.local.get();
-gettingStoredSettings.then(checkStoredSettings, onError);
 
 // Simple listener
 browser.runtime.onMessage.addListener(notify);
